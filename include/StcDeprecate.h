@@ -1,0 +1,12 @@
+#ifndef INCLUDED_STC_DEPRECATE_H
+#define INCLUDED_STC_DEPRECATE_H
+
+#ifdef WIN32
+	#define STC_DEPRECATE(STC_DEPRECATE_MSG) __declspec(deprecated(STC_DEPRECATE_MSG))
+#else 
+	#define STC_DEPRECATE(STC_DEPRECATE_MSG) 
+#endif 
+
+#endif // INCLUDED_STC_DEPRECATE_H
+
+

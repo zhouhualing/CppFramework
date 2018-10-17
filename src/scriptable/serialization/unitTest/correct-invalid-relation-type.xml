@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!-- This is a machine-generated file. -->
+<!-- Please do not edit it. -->
+
+<Project serializationBase="true" 
+ name="Test Project">
+  <RFC2544ThroughputTest 
+   name="DUT 1 Test">
+  </RFC2544ThroughputTest>
+  <Port 
+   location="0,1,0"
+   type="EDM-2001A"
+   speed="100Mbps">
+    <Relation type="Receives-From" target="0x84e6d10"/>
+    <Traffic 
+     rate="100"
+     rateUnit="Frames Per Second"
+     test="foo">
+    </Traffic>
+  </Port>
+</Project>

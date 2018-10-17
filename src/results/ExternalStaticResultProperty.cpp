@@ -1,0 +1,25 @@
+#include "StdAfx.h"
+#include "ExternalStaticResultProperty.h"
+#include "ExternalStaticResultProperty_AutoGen.cpp"
+
+using namespace stc::framework ;
+
+///////////////////////////////////////////////////////////////////////////
+CExternalStaticResultProperty::CExternalStaticResultProperty() :
+mIsEquationProperty(false)
+{
+}
+
+///////////////////////////////////////////////////////////////////////////
+CExternalStaticResultProperty::~CExternalStaticResultProperty()
+{
+}
+
+///////////////////////////////////////////////////////////////////////////
+bool CExternalStaticResultProperty::OnLoadCompleted() 
+{
+    return CExternalResultProperty::OnLoadCompleted() ;
+}
+
+///////////////////////////////////////////////////////////////////////////
+

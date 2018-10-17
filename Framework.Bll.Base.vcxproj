@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{195576B2-ED35-42F9-AA6F-70D2FC9E5BDA}</ProjectGuid>
+    <RootNamespace>Framework.Bll.Base</RootNamespace>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Debug\stcbase.dll</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Debug\stcbase.dll</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Debug\stcbase.dll -c</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\dev\bchen_bdc\integration\bin\Debug\stcbase.dll</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    </NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./include;./include/local;./include/autogen;../../../framework/common/lib/utils;../../../framework/bll/base/include;../../../common/lib/curl-7.35.0/include;D:\dev\bchen_bdc\integration\common\lib\zlib123;D:\dev\bchen_bdc\integration\common\lib\zlib123\contrib\minizip;D:\dev\bchen_bdc\integration\common\lib\boost_1_46_1;D:\dev\bchen_bdc\integration\common\tools\xercesc\src;D:\dev\bchen_bdc\integration\common\tools\sqlite;D:\dev\bchen_bdc\integration\common\tools\log4cplus_1_0_4_1\include;D:\dev\bchen_bdc\integration\common\lib\ACE_wrappers_5.5.6\spirent\bll;D:\dev\bchen_bdc\integration\common\lib\ACE_wrappers_5.5.6;D:\dev\bchen_bdc\integration\common\lib\eigen2;D:\dev\bchen_bdc\integration\common\lib\Flexlm\11.4.1\machind</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Release\stcbase.dll</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Release\stcbase.dll</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo Starting SCons &amp;&amp; scons -C "D:\dev\bchen_bdc\integration" -f SConstruct.bll -j 8  configuration=$(Configuration) D:\dev\bchen_bdc\integration\bin\Release\stcbase.dll -c</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\dev\bchen_bdc\integration\bin\Debug\stcbase.dll</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    </NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./include;./include/local;./include/autogen;../../../framework/common/lib/utils;../../../framework/bll/base/include;../../../common/lib/curl-7.35.0/include;D:\dev\bchen_bdc\integration\common\lib\zlib123;D:\dev\bchen_bdc\integration\common\lib\zlib123\contrib\minizip;D:\dev\bchen_bdc\integration\common\lib\boost_1_46_1;D:\dev\bchen_bdc\integration\common\tools\xercesc\src;D:\dev\bchen_bdc\integration\common\tools\sqlite;D:\dev\bchen_bdc\integration\common\tools\log4cplus_1_0_4_1\include;D:\dev\bchen_bdc\integration\common\lib\ACE_wrappers_5.5.6\spirent\bll;D:\dev\bchen_bdc\integration\common\lib\ACE_wrappers_5.5.6;D:\dev\bchen_bdc\integration\common\lib\eigen2;D:\dev\bchen_bdc\integration\common\lib\Flexlm\11.4.1\machind</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="include\local\MemLeakDetector.h" />
+    <ClInclude Include="include\local\PHXCrash.h" />
+    <ClInclude Include="include\local\Plugin.h" />
+    <ClInclude Include="include\local\PluginManager.h" />
+    <ClInclude Include="include\local\StackWalker.h" />
+    <ClInclude Include="include\local\StcLicenseTimestamp.h" />
+    <ClInclude Include="include\local\StdAfx.h" />
+    <ClInclude Include="include\local\StringResource.h" />
+    <ClInclude Include="include\ActiveEvent.h" />
+    <ClInclude Include="include\ActiveEventManager.h" />
+    <ClInclude Include="include\AddRemoteFileCommand.h" />
+    <ClInclude Include="include\AddRemoteFileMappingEntryCommand.h" />
+    <ClInclude Include="include\aes.h" />
+    <ClInclude Include="include\AttributeTypeBuilder.h" />
+    <ClInclude Include="include\AutomationOptions.h" />
+    <ClInclude Include="include\BaseCustomPropertyManager.h" />
+    <ClInclude Include="include\BaseMessage.h" />
+    <ClInclude Include="include\BaseTimerService.h" />
+    <ClInclude Include="include\BaseValidationContext.h" />
+    <ClInclude Include="include\BinaryReaderWriter.h" />
+    <ClInclude Include="include\BLLLogger.h" />
+    <ClInclude Include="include\BLLLoggerfactory.h" />
+    <ClInclude Include="include\ChangeList.h" />
+    <ClInclude Include="include\ChangeListManager.h" />
+    <ClInclude Include="include\ChartPoint.h" />
+    <ClInclude Include="include\ChassisSlotPort.h" />
+    <ClInclude Include="include\ClientInfo.h" />
+    <ClInclude Include="include\CloneCommand.h" />
+    <ClInclude Include="include\CollectionProperty.h" />
+    <ClInclude Include="include\Command.h" />
+    <ClInclude Include="include\CommandStatusManager.h" />
+    <ClInclude Include="include\CommandStatusUpdate.h" />
+    <ClInclude Include="include\CompileAssert.h" />
+    <ClInclude Include="include\CompositePropertyManager.h" />
+    <ClInclude Include="include\ConfigPropertiesCommand.h" />
+    <ClInclude Include="include\CopyCommand.h" />
+    <ClInclude Include="include\CowDataStore.h" />
+    <ClInclude Include="include\CppSQLite3.h" />
+    <ClInclude Include="include\CpuTimer.h" />
+    <ClInclude Include="include\CreateFromTemplateCommand.h" />
+    <ClInclude Include="include\CreatorCommand.h" />
+    <ClInclude Include="include\DANExUtil.h" />
+    <ClInclude Include="include\DataStore.h" />
+    <ClInclude Include="include\Delegate.h" />
+    <ClInclude Include="include\DeleteCommand.h" />
+    <ClInclude Include="include\DeleteUserDefinedDefaultsCommand.h" />
+    <ClInclude Include="include\Directory.h" />
+    <ClInclude Include="include\DiscoveryCountdownCommand.h" />
+    <ClInclude Include="include\EnumProperty.h" />
+    <ClInclude Include="include\EotResultColumnDefinition.h" />
+    <ClInclude Include="include\EotResultNode.h" />
+    <ClInclude Include="include\EotResultNodeParam.h" />
+    <ClInclude Include="include\EOTResultsWriteDatasetCommand.h" />
+    <ClInclude Include="include\EotResultViewDefinition.h" />
+    <ClInclude Include="include\EventMessage.h" />
+    <ClInclude Include="include\EventMessageManager.h" />
+    <ClInclude Include="include\ExportUserDefinedDefaultsCommand.h" />
+    <ClInclude Include="include\ExternalDynamicResultProperty.h" />
+    <ClInclude Include="include\ExternalEquationResultProperty.h" />
+    <ClInclude Include="include\ExternalProperty.h" />
+    <ClInclude Include="include\ExternalResultProperty.h" />
+    <ClInclude Include="include\ExternalResultPropertyContainer.h" />
+    <ClInclude Include="include\ExternalStaticResultProperty.h" />
+    <ClInclude Include="include\FastDelegate.h" />
+    <ClInclude Include="include\FastDelegateBind.h" />
+    <ClInclude Include="include\FatalUserLogHandler.h" />
+    <ClInclude Include="include\FilePath.h" />
+    <ClInclude Include="include\FilePathReplacementCommand.h" />
+    <ClInclude Include="include\frameworkConst.h" />
+    <ClInclude Include="include\GetAlarmInfoCommand.h" />
+    <ClInclude Include="include\GetCachedLogsCommand.h" />
+    <ClInclude Include="include\GetConfigInfoCommand.h" />
+    <ClInclude Include="include\GetFilesRequiredForCommand.h" />
+    <ClInclude Include="include\GetPluginInfoCommand.h" />
+    <ClInclude Include="include\GetPropertyTypeMetaInfoCommand.h" />
+    <ClInclude Include="include\GetRelationsMetaInfoCommand.h" />
+    <ClInclude Include="include\GetRelativesCommand.h" />
+    <ClInclude Include="include\GetRemoteFileMappingEntryCommand.h" />
+    <ClInclude Include="include\GetSystemTimeCommand.h" />
+    <ClInclude Include="include\GetUserDefinedDefaultsCommand.h" />
+    <ClInclude Include="include\HandleMap.h" />
+    <ClInclude Include="include\HandleRegistry.h" />
+    <ClInclude Include="include\HelpCommand.h" />
+    <ClInclude Include="include\HttpNotificationService.h" />
+    <ClInclude Include="include\IniFile.h" />
+    <ClInclude Include="include\LicenseServer.h" />
+    <ClInclude Include="include\LicenseServerManager.h" />
+    <ClInclude Include="include\ListCommand.h" />
+    <ClInclude Include="include\LoadFromDatabaseCommand.h" />
+    <ClInclude Include="include\LoadFromTemplateCommand.h" />
+    <ClInclude Include="include\LoadFromXmlCommand.h" />
+    <ClInclude Include="include\LoadUserDefinedDefaultsCommand.h" />
+    <ClInclude Include="include\Log4CPlusAdaptor.h" />
+    <ClInclude Include="include\MemoryGuard.h" />
+    <ClInclude Include="include\MemoryStream.h" />
+    <ClInclude Include="include\MessageService.h" />
+    <ClInclude Include="include\MetaClass.h" />
+    <ClInclude Include="include\MetaClassLoadPostProcessor.h" />
+    <ClInclude Include="include\MetaClassManager.h" />
+    <ClInclude Include="include\MetaClassUtil.h" />
+    <ClInclude Include="include\MetaInfo.h" />
+    <ClInclude Include="include\MetaProperty.h" />
+    <ClInclude Include="include\MetaPropIdValueCache.h" />
+    <ClInclude Include="include\ModifyPropertyCommand.h" />
+    <ClInclude Include="include\Mutex.h" />
+    <ClInclude Include="include\NotificationService.h" />
+    <ClInclude Include="include\PassFailCommand.h" />
+    <ClInclude Include="include\Path.h" />
+    <ClInclude Include="include\PluginInfo.h" />
+    <ClInclude Include="include\ProfileTimer.h" />
+    <ClInclude Include="include\Project.h" />
+    <ClInclude Include="include\Property.h" />
+    <ClInclude Include="include\PropertyIdValueContainer.h" />
+    <ClInclude Include="include\PropValidator.h" />
+    <ClInclude Include="include\PropValidatorImpl.h" />
+    <ClInclude Include="include\RelationData.h" />
+    <ClInclude Include="include\RelationHelper.h" />
+    <ClInclude Include="include\RelationManager.h" />
+    <ClInclude Include="include\RelativesCommandsHelpers.h" />
+    <ClInclude Include="include\RemoteFileMappingEntry.h" />
+    <ClInclude Include="include\RemoveDuplicateTagsCommand.h" />
+    <ClInclude Include="include\ReorderRelativesCommand.h" />
+    <ClInclude Include="include\ResetActiveEventDefaultResponseCommand.h" />
+    <ClInclude Include="include\ResetConfigCommand.h" />
+    <ClInclude Include="include\ResourceManager.h" />
+    <ClInclude Include="include\ResourcePack.h" />
+    <ClInclude Include="include\Result.h" />
+    <ClInclude Include="include\ResultViewData.h" />
+    <ClInclude Include="include\SalManager.h" />
+    <ClInclude Include="include\SaveAsPerlCommand.h" />
+    <ClInclude Include="include\SaveAsPythonCommand.h" />
+    <ClInclude Include="include\SaveAsRubyCommand.h" />
+    <ClInclude Include="include\SaveAsTclCommand.h" />
+    <ClInclude Include="include\SaveAsTclWithXmlCommand.h" />
+    <ClInclude Include="include\SaveAsTemplateCommand.h" />
+    <ClInclude Include="include\SaveAsXmlCommand.h" />
+    <ClInclude Include="include\SaveToTccCommand.h" />
+    <ClInclude Include="include\SaveToTctCommand.h" />
+    <ClInclude Include="include\Scriptable.h" />
+    <ClInclude Include="include\ScriptableAutoPtr.h" />
+    <ClInclude Include="include\ScriptableCompositePropertiesHandler.h" />
+    <ClInclude Include="include\ScriptableCreator.h" />
+    <ClInclude Include="include\ScriptableLocator.h" />
+    <ClInclude Include="include\ScriptableReportWriter.h" />
+    <ClInclude Include="include\ScriptingEngine.h" />
+    <ClInclude Include="include\ScriptingEngineManager.h" />
+    <ClInclude Include="include\SetRelationCommand.h" />
+    <ClInclude Include="include\SetRelativesCommand.h" />
+    <ClInclude Include="include\SetSystemConfigCommand.h" />
+    <ClInclude Include="include\SetUserDefinedDefaultsCommand.h" />
+    <ClInclude Include="include\SqliteUtil.h" />
+    <ClInclude Include="include\StakCommandMetaClass.h" />
+    <ClInclude Include="include\StcCollections.h" />
+    <ClInclude Include="include\StcDeprecate.h" />
+    <ClInclude Include="include\StcException.h" />
+    <ClInclude Include="include\StcExport.h" />
+    <ClInclude Include="include\StcFileManager.h" />
+    <ClInclude Include="include\StcHandle.h" />
+    <ClInclude Include="include\StcLicenseUtil.h" />
+    <ClInclude Include="include\StcSystem.h" />
+    <ClInclude Include="include\StcSystemConfiguration.h" />
+    <ClInclude Include="include\StcTypes.h" />
+    <ClInclude Include="include\StringMessageHandler.h" />
+    <ClInclude Include="include\StringUtil.h" />
+    <ClInclude Include="include\SubscribeObjectPropertyChangeCommand.h" />
+    <ClInclude Include="include\SubscribePropertyChangeCommand.h" />
+    <ClInclude Include="include\SystemUtils.h" />
+    <ClInclude Include="include\Tag.h" />
+    <ClInclude Include="include\Tags.h" />
+    <ClInclude Include="include\TaskManager.h" />
+    <ClInclude Include="include\TerminateBllCommand.h" />
+    <ClInclude Include="include\Testable.h" />
+    <ClInclude Include="include\TestableResult.h" />
+    <ClInclude Include="include\TestableResult1.h" />
+    <ClInclude Include="include\TestableResult2.h" />
+    <ClInclude Include="include\TestableResultSubClass1.h" />
+    <ClInclude Include="include\TestableResultSubClass2.h" />
+    <ClInclude Include="include\TestableSubClass.h" />
+    <ClInclude Include="include\Thread.h" />
+    <ClInclude Include="include\Timer.h" />
+    <ClInclude Include="include\TimerCommand.h" />
+    <ClInclude Include="include\TypedCompositePropertyHelper.h" />
+    <ClInclude Include="include\TypedProperty.h" />
+    <ClInclude Include="include\UnsubscribeObjectPropertyChangeCommand.h" />
+    <ClInclude Include="include\UnsubscribePropertyChangeCommand.h" />
+    <ClInclude Include="include\UpdateLicenseServerInfoCommand.h" />
+    <ClInclude Include="include\UpdateRetrievedRemoteFileMappingEntryCommand.h" />
+    <ClInclude Include="include\UserDefinedDefaults.h" />
+    <ClInclude Include="include\UserDefinedDefaultsManager.h" />
+    <ClInclude Include="include\UserLogger.h" />
+    <ClInclude Include="include\UserLogResult.h" />
+    <ClInclude Include="include\UserNote.h" />
+    <ClInclude Include="include\ZipUtils.h" />
+    <ClInclude Include="src\message\Session.h" />
+    <ClInclude Include="src\scriptable\serialization\AbstractImporter.h" />
+    <ClInclude Include="src\scriptable\serialization\AbstractRecursiveExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\AbstractRecursiveFileExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\DbExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\DbImporter.h" />
+    <ClInclude Include="src\scriptable\serialization\Exportable.h" />
+    <ClInclude Include="src\scriptable\serialization\Exporter.h" />
+    <ClInclude Include="src\scriptable\serialization\ImexLoader.h" />
+    <ClInclude Include="src\scriptable\serialization\ImexSaver.h" />
+    <ClInclude Include="src\scriptable\serialization\ImportableExportable.h" />
+    <ClInclude Include="src\scriptable\serialization\ImportableFactory.h" />
+    <ClInclude Include="src\scriptable\serialization\ImportableProvider.h" />
+    <ClInclude Include="src\scriptable\serialization\Importer.h" />
+    <ClInclude Include="src\scriptable\serialization\IScriptCodeGen.h" />
+    <ClInclude Include="src\scriptable\serialization\Loader.h" />
+    <ClInclude Include="src\scriptable\serialization\NoDefaultScriptableImexAdapter.h" />
+    <ClInclude Include="src\scriptable\serialization\PerlCodeGen.h" />
+    <ClInclude Include="src\scriptable\serialization\PythonCodeGen.h" />
+    <ClInclude Include="src\scriptable\serialization\Saver.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptableImexAdapter.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptableProvider.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptCommentProvider.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptExporterOptions.h" />
+    <ClInclude Include="src\scriptable\serialization\ScriptWithXmlExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\StringExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\TclCodeGen.h" />
+    <ClInclude Include="src\scriptable\serialization\XmlExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\XmlGenericExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\XmlSpecificExporter.h" />
+    <ClInclude Include="src\scriptable\serialization\XmlSpecificImporter.h" />
+    <ClInclude Include="src\scriptable\serialization\XmlSpecificSaxHandlers.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\def\stcFramework.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Framework.Bll.Base.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\AddRemoteFileCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\Command.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\CommandStatusManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\CommandStatusUpdate.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\ConfigPropertiesCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\DeleteUserDefinedDefaultsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\DiscoveryCountdownCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\ExportUserDefinedDefaultsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\GetAlarmInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\GetConfigInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\GetSystemTimeCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\GetUserDefinedDefaultsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\LoadUserDefinedDefaultsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\PassFailCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\SetSystemConfigCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\SetUserDefinedDefaultsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\SubscribeObjectPropertyChangeCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\SubscribePropertyChangeCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\TimerCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\UnsubscribeObjectPropertyChangeCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\command\UnsubscribePropertyChangeCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\database\CppSQLite3.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\database\SqliteUtil.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\licensing\StcLicenseUtil.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\BLLLogger.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\BLLLoggerFactory.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\FatalUserLogHandler.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\Log4CPlusAdaptor.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\UserLogger.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\logger\UserLogResult.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\BaseMessage.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\ClientInfo.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\ClientMessageService.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\HandleMap.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\MemoryStream.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\MessageService.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\Session.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\message\StringMessageHandler.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\notification\ActiveEvent.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\notification\ActiveEventManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\notification\HttpNotificationService.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\notification\NotificationService.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\notification\ResetActiveEventDefaultResponseCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\plugin\Directory.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\plugin\Plugin.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\plugin\PluginManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\EotResultColumnDefinition.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\EotResultNode.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\EotResultNodeParam.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\EotResultViewDefinition.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\EventMessageManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\ExternalDynamicResultProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\ExternalEquationResultProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\ExternalResultProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\ExternalStaticResultProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\Result.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\results\ResultViewData.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\AbstractImporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\AbstractRecursiveExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\AbstractRecursiveFileExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\CreateFromTemplateCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\DbExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\DbImporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\EOTResultsWriteDatasetCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\Exporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\FilePathReplacementCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ImexLoader.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ImexSaver.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ImportableFactory.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\Loader.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\LoadFromDatabaseCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\LoadFromTemplateCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\LoadFromXmlCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\NoDefaultScriptableImexAdapter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\PerlCodeGen.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\PythonCodeGen.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ResetConfigCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsPerlCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsPythonCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsRubyCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsTclCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsTclWithXmlCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsTemplateCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveAsXmlCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\Saver.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\SaveToTccCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ScriptableImexAdapter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ScriptableProvider.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ScriptCommentProvider.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ScriptExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\ScriptWithXmlExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\StringExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\TclCodeGen.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\UserNote.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\XmlExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\XmlGenericExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\XmlSpecificExporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\XmlSpecificImporter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\serialization\XmlSpecificSaxHandlers.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\AutomationOptions.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\BaseCustomPropertyManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ChangeList.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ChangeListManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\CloneCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\CompositePropertyManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\CopyCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\CowDataStore.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\CreatorCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\DataStore.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\DeleteCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ExternalProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\GetPropertyTypeMetaInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\GetRelationsMetaInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\GetRelativesCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\HandleRegistry.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\HelpCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ListCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaClass.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaClassLoadPostProcessor.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaClassManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaClassUtil.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaInfo.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\MetaProperty.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ModifyPropertyCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\Property.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\PropertyIdValueContainer.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\PropValidator.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\RelationHelper.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\RelationManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\RelativesCommandsHelpers.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\RemoteFileMappingEntry.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\RemoveDuplicateTagsCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ReorderRelativesCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\Scriptable.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptableAutoPtr.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptableCompositePropertiesHandler.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptableCreator.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptableLocator.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptableReportWriter.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptingEngine.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\ScriptingEngineManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\SetRelationCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\SetRelativesCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\StakCommandMetaClass.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\Tag.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\Tags.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\Testable.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableResult.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableResult1.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableResult2.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableResultSubClass1.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableResultSubClass2.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TestableSubClass.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\scriptable\TypedCompositePropertyHelper.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\ActivatePluginCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\AddRemoteFileMappingEntryCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\GetCachedLogsCommad.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\GetFilesRequiredForCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\GetPluginInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\GetRemoteFileMappingEntryCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\LicenseServer.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\LicenseServerManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\PluginInfo.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\Project.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\StcException.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\StcFileManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\StcSystem.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\StcSystemConfiguration.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\TerminateBllCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\UpdateLicenseServerInfoCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\UpdateRetrievedRemoteFileMappingEntryCommand.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\UserDefinedDefaults.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\system\UserDefinedDefaultsManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\task\TaskManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\thread\Mutex.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\thread\Thread.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\time\BaseTimerService.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\time\CpuTimer.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\time\ProfileTimer.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\time\Timer.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\aes.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\ChartPoint.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\ChassisSlotPort.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\CompileAssert.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\EventMessage.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\FilePath.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\IniFile.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\MemLeakDetector.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\MemoryGuard.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\MetaPropIdValueCache.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\Path.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\PHXCrash.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\RelationData.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\ResourceManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\ResourcePack.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\StackWalker.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\StcCollections.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\StringUtil.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\SystemUtils.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\UserDefaultUtils.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\util\ZipUtils.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\validate\BaseValidationContext.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\validate\DANExUtil.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\init.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\SalManager.cpp" />
+    <ClCompile Include="D:\dev\bchen_bdc\integration\framework\bll\base\src\StdAfx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SConstruct.bll" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
+<!-- SCons Data:
+fXEBKFUFRGVidWdxAmNjb3B5X3JlZwpfcmVjb25zdHJ1Y3RvcgpxAyhjU0NvbnMuVG9vbC5tc3Zz
+CkNvbmZpZwpxBGNfX2J1aWx0aW5fXwpvYmplY3QKcQVOdFJxBn1xByhVB3ZhcmlhbnRxCGgCVQdj
+bWRhcmdzcQlVAFUIcGxhdGZvcm1xClUFV2luMzJxC1UHcnVuZmlsZXEMVTJEOlxkZXZcYmNoZW5f
+YmRjXGludGVncmF0aW9uXGJpblxEZWJ1Z1xzdGNiYXNlLmRsbHENVQtidWlsZHRhcmdldHEOVTJE
+OlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGJpblxEZWJ1Z1xzdGNiYXNlLmRsbHEPVQZvdXRk
+aXJxEFUAdWJVB1JlbGVhc2VxEWgDKGgEaAVOdFJxEn1xEyhoCGgRaAlVAGgKaAtoDGgNaA5VNEQ6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cYmluXFJlbGVhc2Vcc3RjYmFzZS5kbGxxFGgQVQB1
+YnUu
+
+fXEBKFULT3RoZXIgRmlsZXNxAl1xA1UaLi4vLi4vZGVmL3N0Y0ZyYW1ld29yay54bWxxBGFVDUxv
+Y2FsIEhlYWRlcnNxBV1xBihVFWluY2x1ZGUvQWN0aXZlRXZlbnQuaHEHVRxpbmNsdWRlL0FjdGl2
+ZUV2ZW50TWFuYWdlci5ocQhVHmluY2x1ZGUvQWRkUmVtb3RlRmlsZUNvbW1hbmQuaHEJVSppbmNs
+dWRlL0FkZFJlbW90ZUZpbGVNYXBwaW5nRW50cnlDb21tYW5kLmhxClUNaW5jbHVkZS9hZXMuaHEL
+VR5pbmNsdWRlL0F0dHJpYnV0ZVR5cGVCdWlsZGVyLmhxDFUbaW5jbHVkZS9BdXRvbWF0aW9uT3B0
+aW9ucy5ocQ1VI2luY2x1ZGUvQmFzZUN1c3RvbVByb3BlcnR5TWFuYWdlci5ocQ5VFWluY2x1ZGUv
+QmFzZU1lc3NhZ2UuaHEPVRppbmNsdWRlL0Jhc2VUaW1lclNlcnZpY2UuaHEQVR9pbmNsdWRlL0Jh
+c2VWYWxpZGF0aW9uQ29udGV4dC5ocRFVHGluY2x1ZGUvQmluYXJ5UmVhZGVyV3JpdGVyLmhxElUT
+aW5jbHVkZS9CTExMb2dnZXIuaHETVRppbmNsdWRlL0JMTExvZ2dlcmZhY3RvcnkuaHEUVRRpbmNs
+dWRlL0NoYW5nZUxpc3QuaHEVVRtpbmNsdWRlL0NoYW5nZUxpc3RNYW5hZ2VyLmhxFlUUaW5jbHVk
+ZS9DaGFydFBvaW50LmhxF1UZaW5jbHVkZS9DaGFzc2lzU2xvdFBvcnQuaHEYVRRpbmNsdWRlL0Ns
+aWVudEluZm8uaHEZVRZpbmNsdWRlL0Nsb25lQ29tbWFuZC5ocRpVHGluY2x1ZGUvQ29sbGVjdGlv
+blByb3BlcnR5LmhxG1URaW5jbHVkZS9Db21tYW5kLmhxHFUeaW5jbHVkZS9Db21tYW5kU3RhdHVz
+TWFuYWdlci5ocR1VHWluY2x1ZGUvQ29tbWFuZFN0YXR1c1VwZGF0ZS5ocR5VF2luY2x1ZGUvQ29t
+cGlsZUFzc2VydC5ocR9VImluY2x1ZGUvQ29tcG9zaXRlUHJvcGVydHlNYW5hZ2VyLmhxIFUhaW5j
+bHVkZS9Db25maWdQcm9wZXJ0aWVzQ29tbWFuZC5ocSFVFWluY2x1ZGUvQ29weUNvbW1hbmQuaHEi
+VRZpbmNsdWRlL0Nvd0RhdGFTdG9yZS5ocSNVFGluY2x1ZGUvQ3BwU1FMaXRlMy5ocSRVEmluY2x1
+ZGUvQ3B1VGltZXIuaHElVSNpbmNsdWRlL0NyZWF0ZUZyb21UZW1wbGF0ZUNvbW1hbmQuaHEmVRhp
+bmNsdWRlL0NyZWF0b3JDb21tYW5kLmhxJ1UTaW5jbHVkZS9EQU5FeFV0aWwuaHEoVRNpbmNsdWRl
+L0RhdGFTdG9yZS5ocSlVEmluY2x1ZGUvRGVsZWdhdGUuaHEqVRdpbmNsdWRlL0RlbGV0ZUNvbW1h
+bmQuaHErVSppbmNsdWRlL0RlbGV0ZVVzZXJEZWZpbmVkRGVmYXVsdHNDb21tYW5kLmhxLFUTaW5j
+bHVkZS9EaXJlY3RvcnkuaHEtVSNpbmNsdWRlL0Rpc2NvdmVyeUNvdW50ZG93bkNvbW1hbmQuaHEu
+VRZpbmNsdWRlL0VudW1Qcm9wZXJ0eS5ocS9VI2luY2x1ZGUvRW90UmVzdWx0Q29sdW1uRGVmaW5p
+dGlvbi5ocTBVF2luY2x1ZGUvRW90UmVzdWx0Tm9kZS5ocTFVHGluY2x1ZGUvRW90UmVzdWx0Tm9k
+ZVBhcmFtLmhxMlUnaW5jbHVkZS9FT1RSZXN1bHRzV3JpdGVEYXRhc2V0Q29tbWFuZC5ocTNVIWlu
+Y2x1ZGUvRW90UmVzdWx0Vmlld0RlZmluaXRpb24uaHE0VRZpbmNsdWRlL0V2ZW50TWVzc2FnZS5o
+cTVVHWluY2x1ZGUvRXZlbnRNZXNzYWdlTWFuYWdlci5ocTZVKmluY2x1ZGUvRXhwb3J0VXNlckRl
+ZmluZWREZWZhdWx0c0NvbW1hbmQuaHE3VSdpbmNsdWRlL0V4dGVybmFsRHluYW1pY1Jlc3VsdFBy
+b3BlcnR5LmhxOFUoaW5jbHVkZS9FeHRlcm5hbEVxdWF0aW9uUmVzdWx0UHJvcGVydHkuaHE5VRpp
+bmNsdWRlL0V4dGVybmFsUHJvcGVydHkuaHE6VSBpbmNsdWRlL0V4dGVybmFsUmVzdWx0UHJvcGVy
+dHkuaHE7VSlpbmNsdWRlL0V4dGVybmFsUmVzdWx0UHJvcGVydHlDb250YWluZXIuaHE8VSZpbmNs
+dWRlL0V4dGVybmFsU3RhdGljUmVzdWx0UHJvcGVydHkuaHE9VRZpbmNsdWRlL0Zhc3REZWxlZ2F0
+ZS5ocT5VGmluY2x1ZGUvRmFzdERlbGVnYXRlQmluZC5ocT9VHWluY2x1ZGUvRmF0YWxVc2VyTG9n
+SGFuZGxlci5ocUBVEmluY2x1ZGUvRmlsZVBhdGguaHFBVSRpbmNsdWRlL0ZpbGVQYXRoUmVwbGFj
+ZW1lbnRDb21tYW5kLmhxQlUYaW5jbHVkZS9mcmFtZXdvcmtDb25zdC5ocUNVHWluY2x1ZGUvR2V0
+QWxhcm1JbmZvQ29tbWFuZC5ocURVHmluY2x1ZGUvR2V0Q2FjaGVkTG9nc0NvbW1hbmQuaHFFVR5p
+bmNsdWRlL0dldENvbmZpZ0luZm9Db21tYW5kLmhxRlUkaW5jbHVkZS9HZXRGaWxlc1JlcXVpcmVk
+Rm9yQ29tbWFuZC5ocUdVHmluY2x1ZGUvR2V0UGx1Z2luSW5mb0NvbW1hbmQuaHFIVShpbmNsdWRl
+L0dldFByb3BlcnR5VHlwZU1ldGFJbmZvQ29tbWFuZC5ocUlVJWluY2x1ZGUvR2V0UmVsYXRpb25z
+TWV0YUluZm9Db21tYW5kLmhxSlUdaW5jbHVkZS9HZXRSZWxhdGl2ZXNDb21tYW5kLmhxS1UqaW5j
+bHVkZS9HZXRSZW1vdGVGaWxlTWFwcGluZ0VudHJ5Q29tbWFuZC5ocUxVHmluY2x1ZGUvR2V0U3lz
+dGVtVGltZUNvbW1hbmQuaHFNVSdpbmNsdWRlL0dldFVzZXJEZWZpbmVkRGVmYXVsdHNDb21tYW5k
+LmhxTlUTaW5jbHVkZS9IYW5kbGVNYXAuaHFPVRhpbmNsdWRlL0hhbmRsZVJlZ2lzdHJ5LmhxUFUV
+aW5jbHVkZS9IZWxwQ29tbWFuZC5ocVFVIWluY2x1ZGUvSHR0cE5vdGlmaWNhdGlvblNlcnZpY2Uu
+aHFSVRFpbmNsdWRlL0luaUZpbGUuaHFTVRdpbmNsdWRlL0xpY2Vuc2VTZXJ2ZXIuaHFUVR5pbmNs
+dWRlL0xpY2Vuc2VTZXJ2ZXJNYW5hZ2VyLmhxVVUVaW5jbHVkZS9MaXN0Q29tbWFuZC5ocVZVIWlu
+Y2x1ZGUvTG9hZEZyb21EYXRhYmFzZUNvbW1hbmQuaHFXVSFpbmNsdWRlL0xvYWRGcm9tVGVtcGxh
+dGVDb21tYW5kLmhxWFUcaW5jbHVkZS9Mb2FkRnJvbVhtbENvbW1hbmQuaHFZVShpbmNsdWRlL0xv
+YWRVc2VyRGVmaW5lZERlZmF1bHRzQ29tbWFuZC5ocVpVH2luY2x1ZGUvbG9jYWwvTWVtTGVha0Rl
+dGVjdG9yLmhxW1UYaW5jbHVkZS9sb2NhbC9QSFhDcmFzaC5ocVxVFmluY2x1ZGUvbG9jYWwvUGx1
+Z2luLmhxXVUdaW5jbHVkZS9sb2NhbC9QbHVnaW5NYW5hZ2VyLmhxXlUbaW5jbHVkZS9sb2NhbC9T
+dGFja1dhbGtlci5ocV9VI2luY2x1ZGUvbG9jYWwvU3RjTGljZW5zZVRpbWVzdGFtcC5ocWBVFmlu
+Y2x1ZGUvbG9jYWwvU3RkQWZ4LmhxYVUeaW5jbHVkZS9sb2NhbC9TdHJpbmdSZXNvdXJjZS5ocWJV
+GmluY2x1ZGUvTG9nNENQbHVzQWRhcHRvci5ocWNVFWluY2x1ZGUvTWVtb3J5R3VhcmQuaHFkVRZp
+bmNsdWRlL01lbW9yeVN0cmVhbS5ocWVVGGluY2x1ZGUvTWVzc2FnZVNlcnZpY2UuaHFmVRNpbmNs
+dWRlL01ldGFDbGFzcy5ocWdVJGluY2x1ZGUvTWV0YUNsYXNzTG9hZFBvc3RQcm9jZXNzb3IuaHFo
+VRppbmNsdWRlL01ldGFDbGFzc01hbmFnZXIuaHFpVRdpbmNsdWRlL01ldGFDbGFzc1V0aWwuaHFq
+VRJpbmNsdWRlL01ldGFJbmZvLmhxa1UWaW5jbHVkZS9NZXRhUHJvcGVydHkuaHFsVR5pbmNsdWRl
+L01ldGFQcm9wSWRWYWx1ZUNhY2hlLmhxbVUfaW5jbHVkZS9Nb2RpZnlQcm9wZXJ0eUNvbW1hbmQu
+aHFuVQ9pbmNsdWRlL011dGV4Lmhxb1UdaW5jbHVkZS9Ob3RpZmljYXRpb25TZXJ2aWNlLmhxcFUZ
+aW5jbHVkZS9QYXNzRmFpbENvbW1hbmQuaHFxVQ5pbmNsdWRlL1BhdGguaHFyVRRpbmNsdWRlL1Bs
+dWdpbkluZm8uaHFzVRZpbmNsdWRlL1Byb2ZpbGVUaW1lci5ocXRVEWluY2x1ZGUvUHJvamVjdC5o
+cXVVEmluY2x1ZGUvUHJvcGVydHkuaHF2VSJpbmNsdWRlL1Byb3BlcnR5SWRWYWx1ZUNvbnRhaW5l
+ci5ocXdVF2luY2x1ZGUvUHJvcFZhbGlkYXRvci5ocXhVG2luY2x1ZGUvUHJvcFZhbGlkYXRvcklt
+cGwuaHF5VRZpbmNsdWRlL1JlbGF0aW9uRGF0YS5ocXpVGGluY2x1ZGUvUmVsYXRpb25IZWxwZXIu
+aHF7VRlpbmNsdWRlL1JlbGF0aW9uTWFuYWdlci5ocXxVImluY2x1ZGUvUmVsYXRpdmVzQ29tbWFu
+ZHNIZWxwZXJzLmhxfVUgaW5jbHVkZS9SZW1vdGVGaWxlTWFwcGluZ0VudHJ5LmhxflUkaW5jbHVk
+ZS9SZW1vdmVEdXBsaWNhdGVUYWdzQ29tbWFuZC5ocX9VIWluY2x1ZGUvUmVvcmRlclJlbGF0aXZl
+c0NvbW1hbmQuaHGAVTBpbmNsdWRlL1Jlc2V0QWN0aXZlRXZlbnREZWZhdWx0UmVzcG9uc2VDb21t
+YW5kLmhxgVUcaW5jbHVkZS9SZXNldENvbmZpZ0NvbW1hbmQuaHGCVRlpbmNsdWRlL1Jlc291cmNl
+TWFuYWdlci5ocYNVFmluY2x1ZGUvUmVzb3VyY2VQYWNrLmhxhFUQaW5jbHVkZS9SZXN1bHQuaHGF
+VRhpbmNsdWRlL1Jlc3VsdFZpZXdEYXRhLmhxhlUUaW5jbHVkZS9TYWxNYW5hZ2VyLmhxh1UbaW5j
+bHVkZS9TYXZlQXNQZXJsQ29tbWFuZC5ocYhVHWluY2x1ZGUvU2F2ZUFzUHl0aG9uQ29tbWFuZC5o
+cYlVG2luY2x1ZGUvU2F2ZUFzUnVieUNvbW1hbmQuaHGKVRppbmNsdWRlL1NhdmVBc1RjbENvbW1h
+bmQuaHGLVSFpbmNsdWRlL1NhdmVBc1RjbFdpdGhYbWxDb21tYW5kLmhxjFUfaW5jbHVkZS9TYXZl
+QXNUZW1wbGF0ZUNvbW1hbmQuaHGNVRppbmNsdWRlL1NhdmVBc1htbENvbW1hbmQuaHGOVRppbmNs
+dWRlL1NhdmVUb1RjY0NvbW1hbmQuaHGPVRppbmNsdWRlL1NhdmVUb1RjdENvbW1hbmQuaHGQVRRp
+bmNsdWRlL1NjcmlwdGFibGUuaHGRVRtpbmNsdWRlL1NjcmlwdGFibGVBdXRvUHRyLmhxklUuaW5j
+bHVkZS9TY3JpcHRhYmxlQ29tcG9zaXRlUHJvcGVydGllc0hhbmRsZXIuaHGTVRtpbmNsdWRlL1Nj
+cmlwdGFibGVDcmVhdG9yLmhxlFUbaW5jbHVkZS9TY3JpcHRhYmxlTG9jYXRvci5ocZVVIGluY2x1
+ZGUvU2NyaXB0YWJsZVJlcG9ydFdyaXRlci5ocZZVGWluY2x1ZGUvU2NyaXB0aW5nRW5naW5lLmhx
+l1UgaW5jbHVkZS9TY3JpcHRpbmdFbmdpbmVNYW5hZ2VyLmhxmFUcaW5jbHVkZS9TZXRSZWxhdGlv
+bkNvbW1hbmQuaHGZVR1pbmNsdWRlL1NldFJlbGF0aXZlc0NvbW1hbmQuaHGaVSBpbmNsdWRlL1Nl
+dFN5c3RlbUNvbmZpZ0NvbW1hbmQuaHGbVSdpbmNsdWRlL1NldFVzZXJEZWZpbmVkRGVmYXVsdHND
+b21tYW5kLmhxnFUUaW5jbHVkZS9TcWxpdGVVdGlsLmhxnVUeaW5jbHVkZS9TdGFrQ29tbWFuZE1l
+dGFDbGFzcy5ocZ5VGGluY2x1ZGUvU3RjQ29sbGVjdGlvbnMuaHGfVRZpbmNsdWRlL1N0Y0RlcHJl
+Y2F0ZS5ocaBVFmluY2x1ZGUvU3RjRXhjZXB0aW9uLmhxoVUTaW5jbHVkZS9TdGNFeHBvcnQuaHGi
+VRhpbmNsdWRlL1N0Y0ZpbGVNYW5hZ2VyLmhxo1UTaW5jbHVkZS9TdGNIYW5kbGUuaHGkVRhpbmNs
+dWRlL1N0Y0xpY2Vuc2VVdGlsLmhxpVUTaW5jbHVkZS9TdGNTeXN0ZW0uaHGmVSBpbmNsdWRlL1N0
+Y1N5c3RlbUNvbmZpZ3VyYXRpb24uaHGnVRJpbmNsdWRlL1N0Y1R5cGVzLmhxqFUeaW5jbHVkZS9T
+dHJpbmdNZXNzYWdlSGFuZGxlci5ocalVFGluY2x1ZGUvU3RyaW5nVXRpbC5ocapVLmluY2x1ZGUv
+U3Vic2NyaWJlT2JqZWN0UHJvcGVydHlDaGFuZ2VDb21tYW5kLmhxq1UoaW5jbHVkZS9TdWJzY3Jp
+YmVQcm9wZXJ0eUNoYW5nZUNvbW1hbmQuaHGsVRVpbmNsdWRlL1N5c3RlbVV0aWxzLmhxrVUNaW5j
+bHVkZS9UYWcuaHGuVQ5pbmNsdWRlL1RhZ3MuaHGvVRVpbmNsdWRlL1Rhc2tNYW5hZ2VyLmhxsFUd
+aW5jbHVkZS9UZXJtaW5hdGVCbGxDb21tYW5kLmhxsVUSaW5jbHVkZS9UZXN0YWJsZS5ocbJVGGlu
+Y2x1ZGUvVGVzdGFibGVSZXN1bHQuaHGzVRlpbmNsdWRlL1Rlc3RhYmxlUmVzdWx0MS5ocbRVGWlu
+Y2x1ZGUvVGVzdGFibGVSZXN1bHQyLmhxtVUhaW5jbHVkZS9UZXN0YWJsZVJlc3VsdFN1YkNsYXNz
+MS5ocbZVIWluY2x1ZGUvVGVzdGFibGVSZXN1bHRTdWJDbGFzczIuaHG3VRppbmNsdWRlL1Rlc3Rh
+YmxlU3ViQ2xhc3MuaHG4VRBpbmNsdWRlL1RocmVhZC5ocblVD2luY2x1ZGUvVGltZXIuaHG6VRZp
+bmNsdWRlL1RpbWVyQ29tbWFuZC5ocbtVJmluY2x1ZGUvVHlwZWRDb21wb3NpdGVQcm9wZXJ0eUhl
+bHBlci5ocbxVF2luY2x1ZGUvVHlwZWRQcm9wZXJ0eS5ocb1VMGluY2x1ZGUvVW5zdWJzY3JpYmVP
+YmplY3RQcm9wZXJ0eUNoYW5nZUNvbW1hbmQuaHG+VSppbmNsdWRlL1Vuc3Vic2NyaWJlUHJvcGVy
+dHlDaGFuZ2VDb21tYW5kLmhxv1UoaW5jbHVkZS9VcGRhdGVMaWNlbnNlU2VydmVySW5mb0NvbW1h
+bmQuaHHAVTZpbmNsdWRlL1VwZGF0ZVJldHJpZXZlZFJlbW90ZUZpbGVNYXBwaW5nRW50cnlDb21t
+YW5kLmhxwVUdaW5jbHVkZS9Vc2VyRGVmaW5lZERlZmF1bHRzLmhxwlUkaW5jbHVkZS9Vc2VyRGVm
+aW5lZERlZmF1bHRzTWFuYWdlci5occNVFGluY2x1ZGUvVXNlckxvZ2dlci5occRVF2luY2x1ZGUv
+VXNlckxvZ1Jlc3VsdC5occVVEmluY2x1ZGUvVXNlck5vdGUuaHHGVRJpbmNsdWRlL1ppcFV0aWxz
+Lmhxx1UKcmVzb3VyY2UuaHHIVRVzcmMvbWVzc2FnZS9TZXNzaW9uLmhxyVUvc3JjL3NjcmlwdGFi
+bGUvc2VyaWFsaXphdGlvbi9BYnN0cmFjdEltcG9ydGVyLmhxylU4c3JjL3NjcmlwdGFibGUvc2Vy
+aWFsaXphdGlvbi9BYnN0cmFjdFJlY3Vyc2l2ZUV4cG9ydGVyLmhxy1U8c3JjL3NjcmlwdGFibGUv
+c2VyaWFsaXphdGlvbi9BYnN0cmFjdFJlY3Vyc2l2ZUZpbGVFeHBvcnRlci5occxVKXNyYy9zY3Jp
+cHRhYmxlL3NlcmlhbGl6YXRpb24vRGJFeHBvcnRlci5occ1VKXNyYy9zY3JpcHRhYmxlL3Nlcmlh
+bGl6YXRpb24vRGJJbXBvcnRlci5occ5VKXNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vRXhw
+b3J0YWJsZS5occ9VJ3NyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vRXhwb3J0ZXIuaHHQVSlz
+cmMvc2NyaXB0YWJsZS9zZXJpYWxpemF0aW9uL0ltZXhMb2FkZXIuaHHRVShzcmMvc2NyaXB0YWJs
+ZS9zZXJpYWxpemF0aW9uL0ltZXhTYXZlci5ocdJVM3NyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRp
+b24vSW1wb3J0YWJsZUV4cG9ydGFibGUuaHHTVTBzcmMvc2NyaXB0YWJsZS9zZXJpYWxpemF0aW9u
+L0ltcG9ydGFibGVGYWN0b3J5Lmhx1FUxc3JjL3NjcmlwdGFibGUvc2VyaWFsaXphdGlvbi9JbXBv
+cnRhYmxlUHJvdmlkZXIuaHHVVSdzcmMvc2NyaXB0YWJsZS9zZXJpYWxpemF0aW9uL0ltcG9ydGVy
+Lmhx1lUtc3JjL3NjcmlwdGFibGUvc2VyaWFsaXphdGlvbi9JU2NyaXB0Q29kZUdlbi5ocddVJXNy
+Yy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vTG9hZGVyLmhx2FU9c3JjL3NjcmlwdGFibGUvc2Vy
+aWFsaXphdGlvbi9Ob0RlZmF1bHRTY3JpcHRhYmxlSW1leEFkYXB0ZXIuaHHZVSpzcmMvc2NyaXB0
+YWJsZS9zZXJpYWxpemF0aW9uL1BlcmxDb2RlR2VuLmhx2lUsc3JjL3NjcmlwdGFibGUvc2VyaWFs
+aXphdGlvbi9QeXRob25Db2RlR2VuLmhx21Ukc3JjL3NjcmlwdGFibGUvc2VyaWFsaXphdGlvbi9T
+YXZlci5ocdxVNHNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vU2NyaXB0YWJsZUltZXhBZGFw
+dGVyLmhx3VUxc3JjL3NjcmlwdGFibGUvc2VyaWFsaXphdGlvbi9TY3JpcHRhYmxlUHJvdmlkZXIu
+aHHeVTRzcmMvc2NyaXB0YWJsZS9zZXJpYWxpemF0aW9uL1NjcmlwdENvbW1lbnRQcm92aWRlci5o
+cd9VLXNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vU2NyaXB0RXhwb3J0ZXIuaHHgVTRzcmMv
+c2NyaXB0YWJsZS9zZXJpYWxpemF0aW9uL1NjcmlwdEV4cG9ydGVyT3B0aW9ucy5oceFVNHNyYy9z
+Y3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vU2NyaXB0V2l0aFhtbEV4cG9ydGVyLmhx4lUtc3JjL3Nj
+cmlwdGFibGUvc2VyaWFsaXphdGlvbi9TdHJpbmdFeHBvcnRlci5oceNVKXNyYy9zY3JpcHRhYmxl
+L3NlcmlhbGl6YXRpb24vVGNsQ29kZUdlbi5oceRVKnNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRp
+b24vWG1sRXhwb3J0ZXIuaHHlVTFzcmMvc2NyaXB0YWJsZS9zZXJpYWxpemF0aW9uL1htbEdlbmVy
+aWNFeHBvcnRlci5oceZVMnNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vWG1sU3BlY2lmaWNF
+eHBvcnRlci5ocedVMnNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vWG1sU3BlY2lmaWNJbXBv
+cnRlci5ocehVNXNyYy9zY3JpcHRhYmxlL3NlcmlhbGl6YXRpb24vWG1sU3BlY2lmaWNTYXhIYW5k
+bGVycy5ocellVQxIZWFkZXIgRmlsZXNx6l1VDFNvdXJjZSBGaWxlc3HrXXHsKFVURDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGNvbW1hbmRcQWRkUmVt
+b3RlRmlsZUNvbW1hbmQuY3Bwce1VR0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3
+b3JrXGJsbFxiYXNlXHNyY1xjb21tYW5kXENvbW1hbmQuY3Bwce5VVEQ6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xjb21tYW5kXENvbW1hbmRTdGF0dXNN
+YW5hZ2VyLmNwcHHvVVNEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNcY29tbWFuZFxDb21tYW5kU3RhdHVzVXBkYXRlLmNwcHHwVVdEOlxkZXZcYmNoZW5f
+YmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcY29tbWFuZFxDb25maWdQcm9w
+ZXJ0aWVzQ29tbWFuZC5jcHBx8VVgRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdv
+cmtcYmxsXGJhc2Vcc3JjXGNvbW1hbmRcRGVsZXRlVXNlckRlZmluZWREZWZhdWx0c0NvbW1hbmQu
+Y3BwcfJVWUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNy
+Y1xjb21tYW5kXERpc2NvdmVyeUNvdW50ZG93bkNvbW1hbmQuY3BwcfNVYEQ6XGRldlxiY2hlbl9i
+ZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xjb21tYW5kXEV4cG9ydFVzZXJE
+ZWZpbmVkRGVmYXVsdHNDb21tYW5kLmNwcHH0VVNEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9u
+XGZyYW1ld29ya1xibGxcYmFzZVxzcmNcY29tbWFuZFxHZXRBbGFybUluZm9Db21tYW5kLmNwcHH1
+VVREOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcY29t
+bWFuZFxHZXRDb25maWdJbmZvQ29tbWFuZC5jcHBx9lVURDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGNvbW1hbmRcR2V0U3lzdGVtVGltZUNvbW1hbmQu
+Y3BwcfdVXUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNy
+Y1xjb21tYW5kXEdldFVzZXJEZWZpbmVkRGVmYXVsdHNDb21tYW5kLmNwcHH4VV5EOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcY29tbWFuZFxMb2FkVXNl
+ckRlZmluZWREZWZhdWx0c0NvbW1hbmQuY3BwcflVT0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRp
+b25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xjb21tYW5kXFBhc3NGYWlsQ29tbWFuZC5jcHBx+lVW
+RDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGNvbW1h
+bmRcU2V0U3lzdGVtQ29uZmlnQ29tbWFuZC5jcHBx+1VdRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGNvbW1hbmRcU2V0VXNlckRlZmluZWREZWZhdWx0
+c0NvbW1hbmQuY3BwcfxVZEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJs
+bFxiYXNlXHNyY1xjb21tYW5kXFN1YnNjcmliZU9iamVjdFByb3BlcnR5Q2hhbmdlQ29tbWFuZC5j
+cHBx/VVeRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3Jj
+XGNvbW1hbmRcU3Vic2NyaWJlUHJvcGVydHlDaGFuZ2VDb21tYW5kLmNwcHH+VUxEOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcY29tbWFuZFxUaW1lckNv
+bW1hbmQuY3Bwcf9VZkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxi
+YXNlXHNyY1xjb21tYW5kXFVuc3Vic2NyaWJlT2JqZWN0UHJvcGVydHlDaGFuZ2VDb21tYW5kLmNw
+cHIAAQAAVWBEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxz
+cmNcY29tbWFuZFxVbnN1YnNjcmliZVByb3BlcnR5Q2hhbmdlQ29tbWFuZC5jcHByAQEAAFVLRDpc
+ZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGRhdGFiYXNl
+XENwcFNRTGl0ZTMuY3BwcgIBAABVS0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3
+b3JrXGJsbFxiYXNlXHNyY1xkYXRhYmFzZVxTcWxpdGVVdGlsLmNwcHIDAQAAVTxEOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcaW5pdC5jcHByBAEAAFVQ
+RDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGxpY2Vu
+c2luZ1xTdGNMaWNlbnNlVXRpbC5jcHByBQEAAFVIRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlv
+blxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGxvZ2dlclxCTExMb2dnZXIuY3BwcgYBAABVT0Q6XGRl
+dlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xsb2dnZXJcQkxM
+TG9nZ2VyRmFjdG9yeS5jcHByBwEAAFVSRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFt
+ZXdvcmtcYmxsXGJhc2Vcc3JjXGxvZ2dlclxGYXRhbFVzZXJMb2dIYW5kbGVyLmNwcHIIAQAAVU9E
+OlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcbG9nZ2Vy
+XExvZzRDUGx1c0FkYXB0b3IuY3BwcgkBAABVSUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25c
+ZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xsb2dnZXJcVXNlckxvZ2dlci5jcHByCgEAAFVMRDpcZGV2
+XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXGxvZ2dlclxVc2Vy
+TG9nUmVzdWx0LmNwcHILAQAAVUtEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29y
+a1xibGxcYmFzZVxzcmNcbWVzc2FnZVxCYXNlTWVzc2FnZS5jcHByDAEAAFVKRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXG1lc3NhZ2VcQ2xpZW50SW5m
+by5jcHByDQEAAFVURDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXG1lc3NhZ2VcQ2xpZW50TWVzc2FnZVNlcnZpY2UuY3Bwcg4BAABVSUQ6XGRldlxiY2hl
+bl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xtZXNzYWdlXEhhbmRsZU1h
+cC5jcHByDwEAAFVMRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXG1lc3NhZ2VcTWVtb3J5U3RyZWFtLmNwcHIQAQAAVU5EOlxkZXZcYmNoZW5fYmRjXGlu
+dGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcbWVzc2FnZVxNZXNzYWdlU2VydmljZS5j
+cHByEQEAAFVHRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vc
+c3JjXG1lc3NhZ2VcU2Vzc2lvbi5jcHByEgEAAFVURDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlv
+blxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXG1lc3NhZ2VcU3RyaW5nTWVzc2FnZUhhbmRsZXIuY3Bw
+chMBAABVUEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNy
+Y1xub3RpZmljYXRpb25cQWN0aXZlRXZlbnQuY3BwchQBAABVV0Q6XGRldlxiY2hlbl9iZGNcaW50
+ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xub3RpZmljYXRpb25cQWN0aXZlRXZlbnRN
+YW5hZ2VyLmNwcHIVAQAAVVxEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xi
+bGxcYmFzZVxzcmNcbm90aWZpY2F0aW9uXEh0dHBOb3RpZmljYXRpb25TZXJ2aWNlLmNwcHIWAQAA
+VVhEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcbm90
+aWZpY2F0aW9uXE5vdGlmaWNhdGlvblNlcnZpY2UuY3BwchcBAABVa0Q6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xub3RpZmljYXRpb25cUmVzZXRBY3Rp
+dmVFdmVudERlZmF1bHRSZXNwb25zZUNvbW1hbmQuY3BwchgBAABVSEQ6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xwbHVnaW5cRGlyZWN0b3J5LmNwcHIZ
+AQAAVUVEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNc
+cGx1Z2luXFBsdWdpbi5jcHByGgEAAFVMRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFt
+ZXdvcmtcYmxsXGJhc2Vcc3JjXHBsdWdpblxQbHVnaW5NYW5hZ2VyLmNwcHIbAQAAVVlEOlxkZXZc
+YmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVzdWx0c1xFb3RS
+ZXN1bHRDb2x1bW5EZWZpbml0aW9uLmNwcHIcAQAAVU1EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0
+aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVzdWx0c1xFb3RSZXN1bHROb2RlLmNwcHIdAQAA
+VVJEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVz
+dWx0c1xFb3RSZXN1bHROb2RlUGFyYW0uY3Bwch4BAABVV0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdy
+YXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xyZXN1bHRzXEVvdFJlc3VsdFZpZXdEZWZpbml0
+aW9uLmNwcHIfAQAAVVNEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNccmVzdWx0c1xFdmVudE1lc3NhZ2VNYW5hZ2VyLmNwcHIgAQAAVV1EOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVzdWx0c1xFeHRlcm5h
+bER5bmFtaWNSZXN1bHRQcm9wZXJ0eS5jcHByIQEAAFVeRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHJlc3VsdHNcRXh0ZXJuYWxFcXVhdGlvblJlc3Vs
+dFByb3BlcnR5LmNwcHIiAQAAVVZEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29y
+a1xibGxcYmFzZVxzcmNccmVzdWx0c1xFeHRlcm5hbFJlc3VsdFByb3BlcnR5LmNwcHIjAQAAVVxE
+OlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVzdWx0
+c1xFeHRlcm5hbFN0YXRpY1Jlc3VsdFByb3BlcnR5LmNwcHIkAQAAVUZEOlxkZXZcYmNoZW5fYmRj
+XGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNccmVzdWx0c1xSZXN1bHQuY3BwciUB
+AABVTkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xy
+ZXN1bHRzXFJlc3VsdFZpZXdEYXRhLmNwcHImAQAAVUJEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0
+aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcU2FsTWFuYWdlci5jcHByJwEAAFVURDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcQXV0
+b21hdGlvbk9wdGlvbnMuY3BwcigBAABVXEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJh
+bWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXEJhc2VDdXN0b21Qcm9wZXJ0eU1hbmFnZXIu
+Y3BwcikBAABVTUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNl
+XHNyY1xzY3JpcHRhYmxlXENoYW5nZUxpc3QuY3BwcioBAABVVEQ6XGRldlxiY2hlbl9iZGNcaW50
+ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXENoYW5nZUxpc3RNYW5h
+Z2VyLmNwcHIrAQAAVU9EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNcc2NyaXB0YWJsZVxDbG9uZUNvbW1hbmQuY3BwciwBAABVW0Q6XGRldlxiY2hlbl9i
+ZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXENvbXBvc2l0
+ZVByb3BlcnR5TWFuYWdlci5jcHByLQEAAFVORDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxm
+cmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcQ29weUNvbW1hbmQuY3Bwci4BAABVT0Q6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRh
+YmxlXENvd0RhdGFTdG9yZS5jcHByLwEAAFVRRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxm
+cmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcQ3JlYXRvckNvbW1hbmQuY3BwcjABAABV
+TEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3Jp
+cHRhYmxlXERhdGFTdG9yZS5jcHByMQEAAFVQRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxm
+cmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcRGVsZXRlQ29tbWFuZC5jcHByMgEAAFVT
+RDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlw
+dGFibGVcRXh0ZXJuYWxQcm9wZXJ0eS5jcHByMwEAAFVhRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcR2V0UHJvcGVydHlUeXBlTWV0
+YUluZm9Db21tYW5kLmNwcHI0AQAAVV5EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1l
+d29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxHZXRSZWxhdGlvbnNNZXRhSW5mb0NvbW1hbmQu
+Y3BwcjUBAABVVkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNl
+XHNyY1xzY3JpcHRhYmxlXEdldFJlbGF0aXZlc0NvbW1hbmQuY3BwcjYBAABVUUQ6XGRldlxiY2hl
+bl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXEhhbmRs
+ZVJlZ2lzdHJ5LmNwcHI3AQAAVU5EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29y
+a1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxIZWxwQ29tbWFuZC5jcHByOAEAAFVORDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcTGlz
+dENvbW1hbmQuY3BwcjkBAABVTEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3Jr
+XGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXE1ldGFDbGFzcy5jcHByOgEAAFVdRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcTWV0YUNs
+YXNzTG9hZFBvc3RQcm9jZXNzb3IuY3BwcjsBAABVU0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRp
+b25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXE1ldGFDbGFzc01hbmFnZXIuY3Bw
+cjwBAABVUEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNy
+Y1xzY3JpcHRhYmxlXE1ldGFDbGFzc1V0aWwuY3Bwcj0BAABVS0Q6XGRldlxiY2hlbl9iZGNcaW50
+ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXE1ldGFJbmZvLmNwcHI+
+AQAAVU9EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNc
+c2NyaXB0YWJsZVxNZXRhUHJvcGVydHkuY3Bwcj8BAABVWEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdy
+YXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXE1vZGlmeVByb3BlcnR5Q29t
+bWFuZC5jcHByQAEAAFVLRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHNjcmlwdGFibGVcUHJvcGVydHkuY3BwckEBAABVW0Q6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFByb3BlcnR5SWRW
+YWx1ZUNvbnRhaW5lci5jcHByQgEAAFVQRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFt
+ZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcUHJvcFZhbGlkYXRvci5jcHByQwEAAFVRRDpc
+ZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFi
+bGVcUmVsYXRpb25IZWxwZXIuY3BwckQBAABVUkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25c
+ZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFJlbGF0aW9uTWFuYWdlci5jcHByRQEA
+AFVbRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNj
+cmlwdGFibGVcUmVsYXRpdmVzQ29tbWFuZHNIZWxwZXJzLmNwcHJGAQAAVVlEOlxkZXZcYmNoZW5f
+YmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxSZW1vdGVG
+aWxlTWFwcGluZ0VudHJ5LmNwcHJHAQAAVV1EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZy
+YW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxSZW1vdmVEdXBsaWNhdGVUYWdzQ29tbWFu
+ZC5jcHBySAEAAFVaRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXHNjcmlwdGFibGVcUmVvcmRlclJlbGF0aXZlc0NvbW1hbmQuY3BwckkBAABVTUQ6XGRl
+dlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxl
+XFNjcmlwdGFibGUuY3BwckoBAABVVEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3
+b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFNjcmlwdGFibGVBdXRvUHRyLmNwcHJLAQAAVWdE
+OlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0
+YWJsZVxTY3JpcHRhYmxlQ29tcG9zaXRlUHJvcGVydGllc0hhbmRsZXIuY3BwckwBAABVVEQ6XGRl
+dlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxl
+XFNjcmlwdGFibGVDcmVhdG9yLmNwcHJNAQAAVVREOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9u
+XGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxTY3JpcHRhYmxlTG9jYXRvci5jcHBy
+TgEAAFVZRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3Jj
+XHNjcmlwdGFibGVcU2NyaXB0YWJsZVJlcG9ydFdyaXRlci5jcHByTwEAAFVSRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcU2NyaXB0
+aW5nRW5naW5lLmNwcHJQAQAAVVlEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29y
+a1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxTY3JpcHRpbmdFbmdpbmVNYW5hZ2VyLmNwcHJRAQAA
+VWFEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2Ny
+aXB0YWJsZVxzZXJpYWxpemF0aW9uXEFic3RyYWN0SW1wb3J0ZXIuY3BwclIBAABVakQ6XGRldlxi
+Y2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNl
+cmlhbGl6YXRpb25cQWJzdHJhY3RSZWN1cnNpdmVFeHBvcnRlci5jcHByUwEAAFVuRDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2Vy
+aWFsaXphdGlvblxBYnN0cmFjdFJlY3Vyc2l2ZUZpbGVFeHBvcnRlci5jcHByVAEAAFVqRDpcZGV2
+XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVc
+c2VyaWFsaXphdGlvblxDcmVhdGVGcm9tVGVtcGxhdGVDb21tYW5kLmNwcHJVAQAAVVtEOlxkZXZc
+YmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxz
+ZXJpYWxpemF0aW9uXERiRXhwb3J0ZXIuY3BwclYBAABVW0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdy
+YXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cRGJJ
+bXBvcnRlci5jcHByVwEAAFVuRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtc
+YmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxFT1RSZXN1bHRzV3JpdGVEYXRh
+c2V0Q29tbWFuZC5jcHByWAEAAFVZRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdv
+cmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxFeHBvcnRlci5jcHByWQEA
+AFVrRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNj
+cmlwdGFibGVcc2VyaWFsaXphdGlvblxGaWxlUGF0aFJlcGxhY2VtZW50Q29tbWFuZC5jcHByWgEA
+AFVbRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNj
+cmlwdGFibGVcc2VyaWFsaXphdGlvblxJbWV4TG9hZGVyLmNwcHJbAQAAVVpEOlxkZXZcYmNoZW5f
+YmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxp
+emF0aW9uXEltZXhTYXZlci5jcHByXAEAAFViRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxm
+cmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxJbXBvcnRhYmxl
+RmFjdG9yeS5jcHByXQEAAFVXRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtc
+YmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxMb2FkZXIuY3Bwcl4BAABVaEQ6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRh
+YmxlXHNlcmlhbGl6YXRpb25cTG9hZEZyb21EYXRhYmFzZUNvbW1hbmQuY3Bwcl8BAABVaEQ6XGRl
+dlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxl
+XHNlcmlhbGl6YXRpb25cTG9hZEZyb21UZW1wbGF0ZUNvbW1hbmQuY3BwcmABAABVY0Q6XGRldlxi
+Y2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNl
+cmlhbGl6YXRpb25cTG9hZEZyb21YbWxDb21tYW5kLmNwcHJhAQAAVW9EOlxkZXZcYmNoZW5fYmRj
+XGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0
+aW9uXE5vRGVmYXVsdFNjcmlwdGFibGVJbWV4QWRhcHRlci5jcHByYgEAAFVcRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFs
+aXphdGlvblxQZXJsQ29kZUdlbi5jcHByYwEAAFVeRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlv
+blxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxQeXRob25D
+b2RlR2VuLmNwcHJkAQAAVWNEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xi
+bGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0aW9uXFJlc2V0Q29uZmlnQ29tbWFuZC5j
+cHByZQEAAFViRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vc
+c3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxTYXZlQXNQZXJsQ29tbWFuZC5jcHByZgEAAFVk
+RDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlw
+dGFibGVcc2VyaWFsaXphdGlvblxTYXZlQXNQeXRob25Db21tYW5kLmNwcHJnAQAAVWJEOlxkZXZc
+YmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxz
+ZXJpYWxpemF0aW9uXFNhdmVBc1J1YnlDb21tYW5kLmNwcHJoAQAAVWFEOlxkZXZcYmNoZW5fYmRj
+XGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0
+aW9uXFNhdmVBc1RjbENvbW1hbmQuY3BwcmkBAABVaEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRp
+b25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cU2F2ZUFz
+VGNsV2l0aFhtbENvbW1hbmQuY3BwcmoBAABVZkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25c
+ZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cU2F2ZUFzVGVt
+cGxhdGVDb21tYW5kLmNwcHJrAQAAVWFEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1l
+d29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0aW9uXFNhdmVBc1htbENvbW1h
+bmQuY3BwcmwBAABVVkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxi
+YXNlXHNyY1xzY3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cU2F2ZXIuY3Bwcm0BAABVYUQ6XGRldlxi
+Y2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNl
+cmlhbGl6YXRpb25cU2F2ZVRvVGNjQ29tbWFuZC5jcHBybgEAAFVmRDpcZGV2XGJjaGVuX2JkY1xp
+bnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlv
+blxTY3JpcHRhYmxlSW1leEFkYXB0ZXIuY3Bwcm8BAABVY0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdy
+YXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cU2Ny
+aXB0YWJsZVByb3ZpZGVyLmNwcHJwAQAAVWZEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZy
+YW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0aW9uXFNjcmlwdENvbW1l
+bnRQcm92aWRlci5jcHBycQEAAFVfRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdv
+cmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxTY3JpcHRFeHBvcnRlci5j
+cHBycgEAAFVmRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vc
+c3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxTY3JpcHRXaXRoWG1sRXhwb3J0ZXIuY3BwcnMB
+AABVX0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xz
+Y3JpcHRhYmxlXHNlcmlhbGl6YXRpb25cU3RyaW5nRXhwb3J0ZXIuY3BwcnQBAABVW0Q6XGRldlxi
+Y2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNl
+cmlhbGl6YXRpb25cVGNsQ29kZUdlbi5jcHBydQEAAFVZRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxVc2Vy
+Tm90ZS5jcHBydgEAAFVcRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXphdGlvblxYbWxFeHBvcnRlci5jcHBydwEAAFVj
+RDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlw
+dGFibGVcc2VyaWFsaXphdGlvblxYbWxHZW5lcmljRXhwb3J0ZXIuY3BwcngBAABVZEQ6XGRldlxi
+Y2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXHNl
+cmlhbGl6YXRpb25cWG1sU3BlY2lmaWNFeHBvcnRlci5jcHByeQEAAFVkRDpcZGV2XGJjaGVuX2Jk
+Y1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcc2VyaWFsaXph
+dGlvblxYbWxTcGVjaWZpY0ltcG9ydGVyLmNwcHJ6AQAAVWdEOlxkZXZcYmNoZW5fYmRjXGludGVn
+cmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxzZXJpYWxpemF0aW9uXFht
+bFNwZWNpZmljU2F4SGFuZGxlcnMuY3BwcnsBAABVVUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRp
+b25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFNldFJlbGF0aW9uQ29tbWFuZC5j
+cHByfAEAAFVWRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vc
+c3JjXHNjcmlwdGFibGVcU2V0UmVsYXRpdmVzQ29tbWFuZC5jcHByfQEAAFVXRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcU3Rha0Nv
+bW1hbmRNZXRhQ2xhc3MuY3Bwcn4BAABVRkQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJh
+bWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFRhZy5jcHByfwEAAFVHRDpcZGV2XGJjaGVu
+X2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHNjcmlwdGFibGVcVGFncy5j
+cHBygAEAAFVLRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vc
+c3JjXHNjcmlwdGFibGVcVGVzdGFibGUuY3BwcoEBAABVUUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdy
+YXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFRlc3RhYmxlUmVzdWx0LmNw
+cHKCAQAAVVJEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxz
+cmNcc2NyaXB0YWJsZVxUZXN0YWJsZVJlc3VsdDEuY3BwcoMBAABVUkQ6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRhYmxlXFRlc3RhYmxlUmVz
+dWx0Mi5jcHByhAEAAFVaRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHNjcmlwdGFibGVcVGVzdGFibGVSZXN1bHRTdWJDbGFzczEuY3BwcoUBAABVWkQ6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzY3JpcHRh
+YmxlXFRlc3RhYmxlUmVzdWx0U3ViQ2xhc3MyLmNwcHKGAQAAVVNEOlxkZXZcYmNoZW5fYmRjXGlu
+dGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc2NyaXB0YWJsZVxUZXN0YWJsZVN1YkNs
+YXNzLmNwcHKHAQAAVV9EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNcc2NyaXB0YWJsZVxUeXBlZENvbXBvc2l0ZVByb3BlcnR5SGVscGVyLmNwcHKIAQAA
+VT5EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcU3Rk
+QWZ4LmNwcHKJAQAAVVREOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNcc3lzdGVtXEFjdGl2YXRlUGx1Z2luQ29tbWFuZC5jcHByigEAAFVfRDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxBZGRSZW1v
+dGVGaWxlTWFwcGluZ0VudHJ5Q29tbWFuZC5jcHByiwEAAFVSRDpcZGV2XGJjaGVuX2JkY1xpbnRl
+Z3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxHZXRDYWNoZWRMb2dzQ29tbWFk
+LmNwcHKMAQAAVVlEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFz
+ZVxzcmNcc3lzdGVtXEdldEZpbGVzUmVxdWlyZWRGb3JDb21tYW5kLmNwcHKNAQAAVVNEOlxkZXZc
+YmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc3lzdGVtXEdldFBs
+dWdpbkluZm9Db21tYW5kLmNwcHKOAQAAVV9EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZy
+YW1ld29ya1xibGxcYmFzZVxzcmNcc3lzdGVtXEdldFJlbW90ZUZpbGVNYXBwaW5nRW50cnlDb21t
+YW5kLmNwcHKPAQAAVUxEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxc
+YmFzZVxzcmNcc3lzdGVtXExpY2Vuc2VTZXJ2ZXIuY3BwcpABAABVU0Q6XGRldlxiY2hlbl9iZGNc
+aW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1xzeXN0ZW1cTGljZW5zZVNlcnZlck1h
+bmFnZXIuY3BwcpEBAABVSUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJs
+bFxiYXNlXHNyY1xzeXN0ZW1cUGx1Z2luSW5mby5jcHBykgEAAFVGRDpcZGV2XGJjaGVuX2JkY1xp
+bnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxQcm9qZWN0LmNwcHKTAQAA
+VUtEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc3lz
+dGVtXFN0Y0V4Y2VwdGlvbi5jcHBylAEAAFVNRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxm
+cmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxTdGNGaWxlTWFuYWdlci5jcHBylQEAAFVIRDpc
+ZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxT
+dGNTeXN0ZW0uY3BwcpYBAABVVUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3Jr
+XGJsbFxiYXNlXHNyY1xzeXN0ZW1cU3RjU3lzdGVtQ29uZmlndXJhdGlvbi5jcHBylwEAAFVSRDpc
+ZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHN5c3RlbVxU
+ZXJtaW5hdGVCbGxDb21tYW5kLmNwcHKYAQAAVV1EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9u
+XGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc3lzdGVtXFVwZGF0ZUxpY2Vuc2VTZXJ2ZXJJbmZvQ29t
+bWFuZC5jcHBymQEAAFVrRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHN5c3RlbVxVcGRhdGVSZXRyaWV2ZWRSZW1vdGVGaWxlTWFwcGluZ0VudHJ5Q29t
+bWFuZC5jcHBymgEAAFVSRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHN5c3RlbVxVc2VyRGVmaW5lZERlZmF1bHRzLmNwcHKbAQAAVVlEOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcc3lzdGVtXFVzZXJEZWZp
+bmVkRGVmYXVsdHNNYW5hZ2VyLmNwcHKcAQAAVUhEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9u
+XGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdGFza1xUYXNrTWFuYWdlci5jcHBynQEAAFVERDpcZGV2
+XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHRocmVhZFxNdXRl
+eC5jcHByngEAAFVFRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXHRocmVhZFxUaHJlYWQuY3Bwcp8BAABVTUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRp
+b25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x0aW1lXEJhc2VUaW1lclNlcnZpY2UuY3BwcqABAABV
+RUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x0aW1l
+XENwdVRpbWVyLmNwcHKhAQAAVUlEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29y
+a1xibGxcYmFzZVxzcmNcdGltZVxQcm9maWxlVGltZXIuY3BwcqIBAABVQkQ6XGRldlxiY2hlbl9i
+ZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x0aW1lXFRpbWVyLmNwcHKjAQAA
+VUBEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRp
+bFxhZXMuY3BwcqQBAABVR0Q6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJs
+bFxiYXNlXHNyY1x1dGlsXENoYXJ0UG9pbnQuY3BwcqUBAABVTEQ6XGRldlxiY2hlbl9iZGNcaW50
+ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x1dGlsXENoYXNzaXNTbG90UG9ydC5jcHBy
+pgEAAFVKRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3Jj
+XHV0aWxcQ29tcGlsZUFzc2VydC5jcHBypwEAAFVJRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlv
+blxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHV0aWxcRXZlbnRNZXNzYWdlLmNwcHKoAQAAVUVEOlxk
+ZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRpbFxGaWxl
+UGF0aC5jcHByqQEAAFVERDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxs
+XGJhc2Vcc3JjXHV0aWxcSW5pRmlsZS5jcHByqgEAAFVMRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3Jh
+dGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHV0aWxcTWVtTGVha0RldGVjdG9yLmNwcHKrAQAA
+VUhEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRp
+bFxNZW1vcnlHdWFyZC5jcHByrAEAAFVRRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFt
+ZXdvcmtcYmxsXGJhc2Vcc3JjXHV0aWxcTWV0YVByb3BJZFZhbHVlQ2FjaGUuY3Bwcq0BAABVQUQ6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x1dGlsXFBh
+dGguY3Bwcq4BAABVRUQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxi
+YXNlXHNyY1x1dGlsXFBIWENyYXNoLmNwcHKvAQAAVUlEOlxkZXZcYmNoZW5fYmRjXGludGVncmF0
+aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRpbFxSZWxhdGlvbkRhdGEuY3BwcrABAABVTEQ6
+XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x1dGlsXFJl
+c291cmNlTWFuYWdlci5jcHBysQEAAFVJRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFt
+ZXdvcmtcYmxsXGJhc2Vcc3JjXHV0aWxcUmVzb3VyY2VQYWNrLmNwcHKyAQAAVUhEOlxkZXZcYmNo
+ZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRpbFxTdGFja1dhbGtl
+ci5jcHByswEAAFVLRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXHV0aWxcU3RjQ29sbGVjdGlvbnMuY3BwcrQBAABVR0Q6XGRldlxiY2hlbl9iZGNcaW50
+ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x1dGlsXFN0cmluZ1V0aWwuY3BwcrUBAABV
+SEQ6XGRldlxiY2hlbl9iZGNcaW50ZWdyYXRpb25cZnJhbWV3b3JrXGJsbFxiYXNlXHNyY1x1dGls
+XFN5c3RlbVV0aWxzLmNwcHK2AQAAVU1EOlxkZXZcYmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1l
+d29ya1xibGxcYmFzZVxzcmNcdXRpbFxVc2VyRGVmYXVsdFV0aWxzLmNwcHK3AQAAVUVEOlxkZXZc
+YmNoZW5fYmRjXGludGVncmF0aW9uXGZyYW1ld29ya1xibGxcYmFzZVxzcmNcdXRpbFxaaXBVdGls
+cy5jcHByuAEAAFVWRDpcZGV2XGJjaGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJh
+c2Vcc3JjXHZhbGlkYXRlXEJhc2VWYWxpZGF0aW9uQ29udGV4dC5jcHByuQEAAFVKRDpcZGV2XGJj
+aGVuX2JkY1xpbnRlZ3JhdGlvblxmcmFtZXdvcmtcYmxsXGJhc2Vcc3JjXHZhbGlkYXRlXERBTkV4
+VXRpbC5jcHByugEAAGVVDlJlc291cmNlIEZpbGVzcrsBAABdcrwBAABVFUZyYW1ld29yay5CbGwu
+QmFzZS5yY3K9AQAAYXUu
+-->

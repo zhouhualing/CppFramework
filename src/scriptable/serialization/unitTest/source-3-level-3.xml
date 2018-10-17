@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Project id="0x84a6b68" 
+ name="Test Project">
+  <Relation type="Receives-From" target="0x84fe240"/>
+  <RFC2544ThroughputTest id="0x84fe240" 
+   name="DUT 1 Test">
+  </RFC2544ThroughputTest>
+  <Port id="0x84e6b68" 
+   location="0,1,0"
+   type="EDM-2001A"
+   speed="100Mbps">
+    <Relation type="Receives-From" source="0x84a6b68"/>
+    <Relation type="Receives-From" target="0x84e6d10"/>
+    <Traffic id="0x84e6d10" 
+     rate="100"
+     rateUnit="Frames Per &quot;Second&quot;"
+     test="&amp;&lt;&gt;&quot;&apos;\">
+    </Traffic>
+  </Port>
+</Project>

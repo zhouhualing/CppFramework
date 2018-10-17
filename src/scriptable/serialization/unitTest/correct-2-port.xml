@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- This is a machine-generated file. -->
+<!-- Please do not edit it. -->
+
+<Project serializationBase="true" 
+ name="Test Project">
+  <RFC2544ThroughputTest 
+   name="DUT 1 Test">
+  </RFC2544ThroughputTest>
+  <Port 
+   location="0,1,0"
+   type="EDM-2001A"
+   speed="100Mbps">
+    <Traffic 
+     rate="100"
+     rateUnit="Frames Per Second">
+    </Traffic>
+    <Traffic 
+     rate="200"
+     rateUnit="Frames Per Second">
+    </Traffic>
+  </Port>
+  <Port 
+   location="0,2,0"
+   type="EDM-1001A"
+   speed="100Mbps">
+    <Traffic 
+     rate="300"
+     rateUnit="Frames Per Second">
+    </Traffic>
+    <Traffic 
+     rate="600"
+     rateUnit="Frames Per Second">
+    </Traffic>
+  </Port>
+</Project>

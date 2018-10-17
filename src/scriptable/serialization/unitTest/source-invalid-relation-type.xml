@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Project 
+ name="Test Project">
+  <Relation type="Bogus-Relation-Type" target="0x84fe240"/>
+  <RFC2544ThroughputTest id="0x84fe240" 
+   name="DUT 1 Test">
+  </RFC2544ThroughputTest>
+  <Port
+   location="0,1,0"
+   type="EDM-2001A"
+   speed="100Mbps">
+    <Traffic 
+     rate="100"
+     rateUnit="Frames Per Second"
+     test="foo">
+    </Traffic>
+  </Port>
+</Project>
